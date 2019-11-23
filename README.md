@@ -86,7 +86,7 @@ When calculating to the nth decimal place, it may be repeated log2(n) times.
 
 Circumference π can be approximated using a, b, t as follows.
 
-![\Pi \approx \frac{(a + b)^2}{4t}](https://latex.codecogs.com/png.latex?\Pi&space;\approx&space;\frac{(a&space;&plus;&space;b)^2}{4t})
+![\pi \approx \frac{(a + b)^2}{4t}](https://latex.codecogs.com/png.latex?\pi&space;\approx&space;\frac{(a&space;&plus;&space;b)^2}{4t})
 
 ### Leibniz formula for π
 

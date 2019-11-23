@@ -1,21 +1,7 @@
 module CalcPi
 
 #=
-Algorithm of Gauss Legendre is a calculation algorithm with PI
-
-initial value
-```math
-a_0 = 1
-b_0 = \frac{1}{\sqrt{2}}
-t_0 = \frac{1}{4}
-p_0 = 1
-```
-
-Iterative
-Repeat the following calculations until a and b have the desired precision (number of digits).
-When calculating to the nth decimal place, it may be repeated log2(n) times.
-
-a_{n+1} =
+The Gauss Legendre algolithm is a calculation algorithm with PI
 =#
 function gauss_legendre(n::BigInt, debug=false)
     local a::BigFloat = 1.0

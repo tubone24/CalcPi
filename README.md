@@ -7,10 +7,12 @@
 Install with Pkg, just like any other registered Julia package:
 
 ```julia
-pkg> add CalcPi  # Press ']' to enter te Pkg REPL mode.
+pkg> add https://github.com/tubone24/CalcPi.jl  # Press ']' to enter te Pkg REPL mode.
 ```
 
 ## Usage
+
+Usually, Use Gauss-Legendre Algorithm, use the function below.
 
 ```julia
 julia> using CalcPi
@@ -18,6 +20,22 @@ julia> using CalcPi
 julia> CalcPi.gauss_legendre(BigInt(10000))
 
 3.14159265358979311120035621508437779160333415473350005136581079848894037301245
+```
+
+Another choice, Use Leibniz formula for π, use the function below.
+
+```julia
+julia> using CalcPi
+
+julia> CalcPi.leibniz(BigInt(10000))
+
+3.141692643590543213460768320877940222544825752138710733999805489190209879980251
+```
+
+## Test
+
+```julia
+pkg> test 
 ```
 
 ## Explanation of implementation
@@ -70,3 +88,16 @@ Circumference π can be approximated using a, b, t as follows.
 
 ![\Pi \approx \frac{(a + b)^2}{4t}](https://latex.codecogs.com/png.latex?\Pi&space;\approx&space;\frac{(a&space;&plus;&space;b)^2}{4t})
 
+### Leibniz formula for π
+
+In mathematics, the Leibniz formula for π, named after Gottfried Leibniz, that state:
+
+![1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots = \frac{\pi}{4}](https://latex.codecogs.com/png.latex?1&space;-&space;\frac{1}{3}&space;&plus;&space;\frac{1}{5}&space;-&space;\frac{1}{7}&space;&plus;&space;\frac{1}{9}&space;-&space;\cdots&space;=&space;\frac{\pi}{4})
+
+This means that the cross term series where the first term is 1 and each term is an odd reciprocal converges to π / 4 (= 0.785398…).
+
+Using the summation symbol:
+
+![\sum_{n=0}^ \infty \frac{(-1)^n}{2n + 1} = \frac{\pi}{4}](https://latex.codecogs.com/png.latex?\sum_{n=0}^&space;\infty&space;\frac{(-1)^n}{2n&space;&plus;&space;1}&space;=&space;\frac{\pi}{4})
+
+[Quote: Wikipedia](https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80)

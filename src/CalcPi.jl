@@ -23,10 +23,27 @@ function gauss_legendre(n::BigInt, debug=false)
                     print("\n")
                 end
             end
+            print("\n")
         end
     end
-    print("\n")
     return (a + b) * (a + b) / (4 * t)
+end
+
+function leibniz(n::BigInt, debug=false)
+    ret::BigFloat = 0.0
+    for i in 0:n
+        ret += (-1)^i / (2i + 1)
+        if debug
+            if i % 100000 == 0
+                print(".")
+                if i % 10000000 == 0
+                    print("\n")
+                end
+            end
+            print("\n")
+        end
+    end
+    return 4ret
 end
 
 end # module

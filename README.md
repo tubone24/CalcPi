@@ -1,5 +1,9 @@
 # CalcPi
 
+> This is a package that calculates the circumference ratio.
+
+# Implementation
+
 ## Algorithm of Gauss Legendre
 
 Algorithm of Gauss Legendre is a calculation algorithm with PI.

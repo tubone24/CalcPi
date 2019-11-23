@@ -1,4 +1,4 @@
-# CalcPi.ji
+# CalcPi.jl
 
 > This is a package that calculates the circumference ratio.
 
